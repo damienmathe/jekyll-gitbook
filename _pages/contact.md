@@ -6,4 +6,4 @@ category: Jekyll
 layout: post
 ---
 
-This is an contact page.
+Ceci est une page de contact.

@@ -1,18 +1,18 @@
 ---
-title: Wide tables
+title: Tableaux larges
 author: Tao He
 date: 2022-06-26
 category: Jekyll
 layout: post
 ---
 
-A wide tables needs to be wrapped into a `div` with class `table-wrapper`
-to make sure it displayed as expected on mobile devices. For example,
+Un tableau large doit être imbriqué dans une balise `div` avec la classe `table-wrapper`
+afin d'assurer son affichage correct sur les appareils mobiles. Par exemple :
 
 ```markdown
 <div class="table-wrapper" markdown="block">
 
-|title1|title2|title3|title4|title5|title6|title7|title8|
+|titre1|titre2|titre3|titre4|titre5|titre6|titre7|titre8|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |1|2|3|4|5|6|7|8|
 |1|2|3|4|5|6|7|8|
@@ -22,11 +22,11 @@ to make sure it displayed as expected on mobile devices. For example,
 </div>
 ```
 
-Will be rendered as
+Sera rendu de cette façon :
 
 <div class="table-wrapper" markdown="block">
 
-|title1|title2|title3|title4|title5|title6|title7|title8|
+|titre1|titre2|titre3|titre4|titre5|titre6|titre7|titre8|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |1|2|3|4|5|6|7|8|
 |1|2|3|4|5|6|7|8|

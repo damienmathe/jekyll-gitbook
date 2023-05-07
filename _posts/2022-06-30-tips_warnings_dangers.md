@@ -1,66 +1,65 @@
 ---
-title: Tips, Warnings, and Dangers
+title: Conseils, Avertissements et Dangers
 author: Tao He
 date: 2022-06-30
 category: Jekyll
 layout: post
 ---
 
-The jekyll-theme supports tips, warnings, and dangers blocks and the style is referred
-from [the discord.js website][1].
+Le thème jekyll-theme supporte les blocs conseil, avertissement et danger, dont le style provient du [site discord.js][1].
 
-You could have the following [markdown attributes (supported by kramdown)][2]:
+Vous pouvez utiliser les [attributs markdown (supportés par kramdown)][2] suivants :
 
-### Tips
+### Conseils
 
-Using a `{: .block-tip}` attribute:
+En utilisant un attribut `{: .block-tip}` :
 
 ```markdown
-> ##### TIP
+> ##### CONSEIL
 >
-> This guide is last tested with @napi-rs/canvas^0.1.20, so make sure you have
-> this or a similar version after installation.
+> Ce guide a été testé avec @napi-rs/canvas^0.1.20, assurez-vous donc d'avoir
+> cette version (ou similaire) après l'installation.
 {: .block-tip }
 ```
 
-> ##### TIP
+> ##### CONSEIL
 >
-> This guide is last tested with @napi-rs/canvas^0.1.20, so make sure you have
-> this or a similar version after installation.
+> Ce guide a été testé avec @napi-rs/canvas^0.1.20, assurez-vous donc d'avoir
+> cette version (ou similaire) après l'installation.
 {: .block-tip }
 
-### Warnings
+### Avertissements
 
-Using a `{: .block-warning}` attribute:
+En utilisant un attribut `{: .block-warning}` :
 
 ```markdown
-> ##### WARNING
+> ##### AVERTISSEMENT
 >
-> Be sure that you're familiar with things like async/await and object destructuring
-> before continuing, as we'll be making use of features like these.
+> Assurez-vous d'être familier des concepts tels que async/await et la déstructuration d'objets
+> avant de continuer, car nous allons utiliser des fonctions de ce genre.
 {: .block-warning }
 ```
 
-> ##### WARNING
+> ##### AVERTISSEMENT
 >
-> Be sure that you're familiar with things like async/await and object destructuring
-> before continuing, as we'll be making use of features like these.
+> Assurez-vous d'être familier des concepts tels que async/await et la déstructuration d'objets
+> avant de continuer, car nous allons utiliser des fonctions de ce genre.
 {: .block-warning }
 
 ### Dangers
 
-Using a `{: .block-danger}` attribute:
+En utilisant un attribut `{: .block-danger}` :
 
 ```markdown
 > ##### DANGER
 >
-> You cannot delete an ephemeral message.
+> Vous ne pouvez pas supprimer un message éphémère.
 {: .block-danger }
 ```
 
 > ##### DANGER
 >
-> You cannot delete an ephemeral message.
+> Vous ne pouvez pas supprimer un message éphémère.
 {: .block-danger }
 
 [1]: https://discordjs.guide/popular-topics/canvas.html#setting-up-napi-rs-canvas

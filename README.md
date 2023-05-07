@@ -1,73 +1,64 @@
 ---
 layout: home
-title: Jekyll Gitbook Theme
+title: Thème GitBook pour Jekyll
 permalink: /
 ---
 
-Make Jelly site have a GitBook look!
+Pour donner un look GitBook aux sites Jekyll !
 
-## Demo
+## Démo
 
-Live demo on Github Pages: [https://sighingnow.github.io/jekyll-gitbook](https://sighingnow.github.io/jekyll-gitbook)
+Démonstration en ligne sur Github Pages: [https://sighingnow.github.io/jekyll-gitbook](https://sighingnow.github.io/jekyll-gitbook)
 
-[![Jekyll Themes](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)](https://jekyll-themes.com/jekyll-gitbook/)
+[![Thèmes Jekyll](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)](https://jekyll-themes.com/jekyll-gitbook/)
 
-## Why Jekyll with GitBook
+## Pourquoi Jekyll avec GitBook ?
 
-GitBook is an amazing frontend style to present and organize contents (such as book chapters
-and blogs) on Web. The typical to deploy GitBook at [Github Pages][1]
-is building HTML files locally and then push to Github repository, usually to the `gh-pages`
-branch. It's quite annoying to repeat such workload and make it hard for people do version
-control via git for when there are generated HTML files to be staged in and out.
+**GitBook** est un style frontend incroyable pour présenter et organiser des contenus (tels que des chapitres de livre
+et blogs) sur le Web. Le processus typique pour déployer **GitBook** sur les [pages GitHub][1] est de compiler des fichiers HTML localement, puis de les pousser vers le référentiel Github, généralement vers la branche `gh-pages`. Toutefois, il est plutôt ennuyeux de répéter une telle charge de travail, et cela complique le contrôle de version via `git` lorsqu'il y a des fichiers HTML générés à intégrer et à supprimer.
 
-This theme takes style definition out of generated GitBook site and provided the template
-for Jekyll to rendering markdown documents to HTML, thus the whole site can be deployed
-to [Github Pages][1] without generating and uploading HTML bundle every time when there are
-changes to the original repo.
+Ce thème reprend les styles du site **GitBook** et fournit un modèle pour Jekyll de rendu des documents Markdown en HTML, ainsi l'ensemble du site peut être déployé sur les [pages Github][1] sans générer et télécharger le bundle HTML à chaque fois qu'il y a des modifications apportées au référentiel d'origine.
 
-## How to Get Started
+## Pour bien démarrer
 
-This theme can be used just as other [Jekyll themes][1] and support [remote theme][12],
-see [the official guide][13] as well.
+Le thème jekyll-gitbook peut être utilisé comme les autres [thèmes Jekyll][2], et supporte la fonction thème distant (remote theme) sur les [pages Github][1].
 
-You can introduce this jekyll theme into your own site by either
+Vous pouvez ajouter ce thème Jekyll à votre propre site, soit:
 
-- [Fork][3] this repository and add your markdown posts to the `_posts` folder.
-- Use as a remote theme in your [`_config.yml`][14](just like what we do for this
-  site itself),
+- En créant une [instance][3] (fork) de ce référentiel et en y ajoutant vos articles rédigés en Markdown dans le dossier `_posts`, puis en la poussant (push) vers votre propre référentiel GitHub.
+- En l'utilisant en tant que thème distant (remote theme) dans `_config.yml` (comme nous le faisons pour le présent site),
 
 ```yaml
 remote_theme: sighingnow/jekyll-gitbook
 ```
 
-### Deploy Locally with Jekyll Serve
+### Déploiment local avec `jekyll serve`
 
-This theme can be ran locally using Ruby and Gemfiles.
+Ce thème peut être exécuté localement à l'aide de Ruby et des Gemfiles.
 
-[Testing your GitHub Pages site locally with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) - GitHub
+[Tester vos pages GitHub localement avec Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) - GitHub
 
-## Full-text search
+## Recherche de texte complet
 
-The search functionality in jekyll-gitbook theme is powered by the [gitbook-plugin-search-pro][5] plugin and is enabled by default.
+La fonction de recherche dans le thème jekyll-gitbook est fournie par le module [gitbook-plugin-search-pro][5] et est activée par défaut.
 
 [https://sighingnow.github.io/jekyll-gitbook/?q=generated](https://sighingnow.github.io/jekyll-gitbook/?q=generated)
 
-## Code highlight
+## Coloration syntaxique
 
-The code highlight style is configurable the following entry in `_config.yaml`:
+La coloration syntaxique est configurable à l'aide de l'entrée suivante dans le fichier `_config.yaml` :
 
 ```yaml
 syntax_highlighter_style: colorful
 ```
 
-The default code highlight style is `colorful`, the full supported styles can be found from [the rouge repository][6]. Customized
-style can be added to [./assets/gitbook/rouge/](./assets/gitbook/rouge/).
+Le style de coloration syntaxique par défaut est `colorful`, les styles supportés peuvent être trouvés dans [le référentiel rouge][6]. Des styles personnalisés peuvent être ajoutés dans [./assets/gitbook/rouge/](./assets/gitbook/rouge/).
 
-## How to generate TOC
+## Générer une table des matières (TOC)
 
-The jekyll-gitbook theme leverages [jekyll-toc][4] to generate the *Contents* for the page.
-The TOC feature is not enabled by default. To use the TOC feature, modify the TOC
-configuration in `_config.yml`:
+Le thème jekyll-gitbook fait appel à [jekyll-toc][4] pour générer le *contenu* de la page.
+La fonction TOC (table des matières) n'est pas activée par défaut. Pour l'utiliser, modifiez la configuration TOC
+dans `_config.yml` :
 
 ```yaml
 toc:
@@ -78,47 +69,46 @@ toc:
 
 ## Google Analytics, etc.
 
-The jekyll-gitboook theme supports embedding the [Google Analytics][7], [CNZZ][8] and [Application Insights][9] website analytical tools with the following
-minimal configuration in `_config.yaml`:
+Le thème jekyll-gitbook supporte l'implémentation des outils d'analyse de traffic [Google Analytics][7], [CNZZ][8] et [Application Insights][9] grâce à la configuration minimale suivante dans `_config.yaml` :
 
 ```yaml
 tracker:
-  google_analytics: "<YOUR GOOGLE ANALYTICS KEY, e.g, UA-xxxxxx-x>"
+  google_analytics: "<VOTRE CLÉ GOOGLE ANALYTICS, p.e, UA-xxxxxx-x>"
 ```
 
-Similarly, CNZZ can be added with the following configuration in `_config.yaml`
+De la même façon, CNZZ peut être ajouté avec la configuration suivante dans `_config.yaml` :
 
 ```yaml
 tracker:
-  cnzz: "<YOUR CNZZ ANALYTICS KEY, e.g., xxxxxxxx>"
+  cnzz: "<VOTRE CLÉ CNZZ ANALYTICS, p.e., xxxxxxxx>"
 ```
 
-Application Insights can be added with the following configuration in `_config.yaml`
+Application Insights peut être ajouté avec la configuration suivante dans `_config.yaml` :
 
 ```yaml
 tracker:
-  application_insights: "<YOUR APPLICATION INSIGHTS CONNECTION STRING>"
+  application_insights: "<VOTRE PHRASE DE CONNEXION POUR APPLICATION INSIGHTS>"
 ```
 
-## Disqus comments
+## Commentaires Disqus
 
-[Disqus](https://disqus.com/) comments can be enabled by adding the following configuration in `_config.yaml`:
+Les commentaires [Disqus](https://disqus.com/) peuvent être activés en ajoutant la configuration suivante dans `_config.yaml`&nbsp;:
 
 ```yaml
-disqushandler: "<YOUR DISQUS SHORTNAME>"
+disqushandler: "<VOTRE PSEUDONYME DISQUS>"
 ```
 
-## Extra StyleSheet or Javascript elements
+## Feuille de style supplémentaire ou éléments Javascript
 
-You can add extra CSS or JavaScript references using configuration collections:
+Vous pouvez ajouter des styles CSS ou des références JavaScript en utilisant des collections de configuration :
 
-- extra_css: for additional style sheets. If the url does not start by http, the path must be relative to the root of the site, without a starting `/`.
-- extra_header_js: for additional scripts to be included in the `<head>` tag, after the `extra_css` has been added. If the url does not start by http, the path must be relative to the root of the site, without a starting `/`.
-- extra_footer_js: for additional scripts to be included at the end of the HTML document, just before the site tracking script. If the url does not start by http, the path must be relative to the root of the site, without a starting `/`.
+- extra_css: pour les feuilles de style supplémentaires. Si l'URL ne commence pas par `http` ou `https`, le chemin doit être relatif à la racine du site (sans le caractère `/` au début).
+- extra_header_js: pour les scripts supplémentaires à ajouter dans la balise `<head>`, après que `extra_css` ait été ajouté. Si l'URL ne commence pas par `http` ou `https`, le chemin doit être relatif à la racine du site (sans le caractère `/` au début).
+- extra_footer_js: pour les scripts supplémentaires à ajouter à la fin du document HTML, avant les scripts de tracking. Si l'URL ne commence pas par `http` ou `https`, le chemin doit être relatif à la racine du site (sans le caractère `/` au début).
 
-## Customizing font settings
+## Personnalisation des réglages de polices
 
-The fonts can be customized by modifying the `.book.font-family-0` and `.book.font-family-1` entry in [`./assets/gitbook/custom.css`][10],
+Les polices de caractères peuvent être personnalisées en modifiant les entrées `.book.font-family-0` et `.book.font-family-1` dans [`./assets/gitbook/custom.css`][10],
 
 ```css
 .book.font-family-0 {
@@ -129,31 +119,32 @@ The fonts can be customized by modifying the `.book.font-family-0` and `.book.fo
 }
 ```
 
-## Tips, Warnings and Dangers blocks
+## Blocs Conseil, Avertissement et Danger
 
-The jekyll-gitbook theme supports customized kramdown attributes (`{: .block-tip }`, `{: .block-warning }`,
-`{: .block-danger }`) like that displayed in [the discord.js website][11]. The marker can be used like
+Le thème jekyll-gitbook supporte les attributs personnalisés de kramdown (`{: .block-tip }`, `{: .block-warning }`,
+`{: .block-danger }`) comme ceux affichés dans [le site web discord.js][11].
+
+Exemple de code :
 
 ```markdown
-> ##### TIP
+> ##### CONSEIL
 >
-> This guide is last tested with @napi-rs/canvas^0.1.20, so make sure you have
-> this or a similar version after installation.
+> Ce guide a été testé avec @napi-rs/canvas^0.1.20, assurez-vous donc d'avoir
+> cette version (ou similaire) après l'installation.
 {: .block-tip }
 ```
 
-Rendered page can be previewed from
+Le rendu peut être prévisualisé sur cette page :
 
 [https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html](https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html)
 
-## Cover image inside pages
+## Images de couverture dans les pages
 
-The jekyll-gitbook theme supports adding a cover image to a specific page by adding
-a `cover` field to the page metadata:
+Le thème jekyll-gitbook supporte l'ajout d'une image de couverture à une page spécifique en ajoutant un champs `cover` dans les métadonnées de la page :
 
 ```diff
   ---
-  title: Page with cover image
+  title: Page avec image de couverture
   author: Tao He
   date: 2022-05-24
   category: Jekyll
@@ -162,15 +153,15 @@ a `cover` field to the page metadata:
   ---
 ```
 
-The effect can be previewed from
+Cet effet peut être prévisualisé sur cette page :
 
 [https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-05-24-page_cover.html](https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-05-24-page_cover.html)
 
-## License
+## Licence
 
-This work is open sourced under the Apache License, Version 2.0.
+Ce projet est en open source sous la licence Apache, version 2.0.
 
-Copyright 2019 Tao He.
+&copy; 2019 Tao He.
 
 [1]: https://pages.github.com
 [2]: https://pages.github.com/themes

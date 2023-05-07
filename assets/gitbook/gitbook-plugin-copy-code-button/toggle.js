@@ -33,7 +33,7 @@ require(["gitbook", "jquery"], function (gitbook, $) {
             try {
                 return document.execCommand("copy");  // Security exception may be thrown by some browsers.
             } catch (ex) {
-                console.warn("Copy to clipboard failed.", ex);
+                console.warn("Échec de la copie vers le presse-papiers.", ex);
                 return false;
             } finally {
                 document.body.removeChild(textarea);
@@ -55,7 +55,7 @@ require(["gitbook", "jquery"], function (gitbook, $) {
         $("pre").each(function () {
             $(this).css("position", "relative");
 
-            var $copyCodeButton = $("<button class='copy-code-button'>Copy</button>");
+            var $copyCodeButton = $("<button class='copy-code-button'>Copier</button>");
             $copyCodeButton.css({ "position": "absolute", "top": "5px", "right": "5px", "padding": "3px", "background-color": "#313E4E", "color": "white", "border-radius": "5px", "-moz-border-radius": "5px", "-webkit-border-radius": "5px", "border": "2px solid #CCCCCC" });
             $copyCodeButton.click(function () {
                 var $codeContainer = $(this).siblings("code");
@@ -65,17 +65,17 @@ require(["gitbook", "jquery"], function (gitbook, $) {
 
                     var buttonNewText = "";
                     if (copyToClipboard(selectedText) == true) {
-                        buttonNewText = "Copied";
+                        buttonNewText = "Copié";
                         selectElementText($codeContainer.get(0));
                     } else {
-                        buttonNewText = "Unable to copy";
+                        buttonNewText = "Impossible de copier";
                         selectElementText($codeContainer.get(0));
                     }
 
                     $(this).text(buttonNewText);
                     var that = this;
                     setTimeout(function () {
-                        $(that).text("Copy");
+                        $(that).text("Copier");
                     }, 2000);
                 }
             });
